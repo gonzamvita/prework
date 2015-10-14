@@ -14,12 +14,13 @@ require 'Date'
 require 'pry'
 
 class ShoppingCart
+
   def initialize
     @items = []
     @total_price = 0
   end
 
-  def addItems(item)
+  def addItem(item)
     @items.push(item)
   end
 
@@ -27,33 +28,59 @@ class ShoppingCart
     @items.each do |x|
       @total_price += x.price
     end
+  end
 
-    puts "Your total today is #{price} euros"
+  def displayTotal
+    puts "Your total today is #{@total_price} euros"
+  end
+
+  def checkout
+    calculateTotal()
+    displayTotal()
   end
 end
 
 class Item
-  attr_accessor :name, :price, :discount
+  attr_accessor :name, :price
+
   def initialize(name, price)
     @name = name
-    @total_price = price
-    @discount = 0
+    @price = price
   end
+
 end
 
-class Fruit < Item
+class Fruit < Item #no discount on weekdays, 10% off in weekends
   def price
-
+    if Date.today.wday == 0 || Date.today.wday == 6
+      @price -= @price * 10 / 100
+    else
+      @price
+    end
   end
 end
 
-class Houseware < Item
+class Houseware < Item #5% off if the item costs more than 100 €/$
   def price
-
+    if @price > 100
+      @price -= @price * 5 / 100
+    else
+      @price
+    end
   end
 end
 
-apple = Apple.new("Manzana")
+joshs_cart = ShoppingCart.new
+banana = Fruit.new("Banana", 10)
+vaccuum = Houseware.new("Vaccuum", 150)
+oj = Item.new("Orange Juice", 10)
+rice = Item.new("Rice", 1)
+anchovies = Item.new("Anchovies", 2)
 
-puts(apple.name)
-puts(apple.price)
+joshs_cart.addItem(oj)
+joshs_cart.addItem(rice)
+joshs_cart.addItem(banana)
+joshs_cart.addItem(vaccuum)
+joshs_cart.addItem(anchovies)
+
+joshs_cart.checkout
