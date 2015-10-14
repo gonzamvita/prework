@@ -84,3 +84,6 @@ joshs_cart.addItem(vaccuum)
 joshs_cart.addItem(anchovies)
 
 joshs_cart.checkout
+
+# => Final thoughts: it seems to work correctly, but the price gets rounded so
+# => maybe if we use other type for the price we can display the exact price.
