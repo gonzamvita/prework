@@ -28,6 +28,10 @@ class ShoppingCart
     @items.each do |x|
       @total_price += x.price
     end
+
+    if @items.length > 4
+      @total_price -= @total_price * 10 / 100
+    end
   end
 
   def displayTotal
