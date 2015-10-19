@@ -27,4 +27,22 @@ p {
 
 .articleContainer {
   background-color: #FFFFFF;
+  -webkit-box-shadow:10px 5px 5px #888888;
+  -moz-box-shadow:10px 5px 5px #888888;
+  box-shadow:10px 5px 5px #888888;
+}
+
+.box {
+  padding: 10px;
+  margin: 10px;
+}
+
+footer {
+  background-color: #444444;
+  padding: 30px 10px;
+  border-top: 5px solid white;
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  width: 98%;
 }
