@@ -21,21 +21,21 @@ footer {
   margin: auto;
 }
 
-div {
-  margin: 15px;
-}
-
-#image {
+img {
   width: 45%;
   float: left;
+  padding: 5px;
 }
 
 #description {
   width: 45%;
   text-align: left;
   float: right;
+  padding: 5px;
 }
 
-#aside {
+#roster {
   width: 100%;
+  text-align: left;
+  padding: 5px;
 }
