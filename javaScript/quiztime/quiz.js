@@ -74,7 +74,7 @@ question3();
 function question4() {
 
   var phrase = "Ganska exakt en och en halv timme efter samtalet från Lisa Holms mobiltelefon till pappan steg 35-åringen och hans fru in i affären Handlarn i Källby, fem kilometer från Blomberg."
-  var question = prompt('How many letters å can you count in this phrase?: '+ phrase );
+  var question = prompt('How many letters å can you count in this phrase?:\n'+ phrase );
 
   counter = charFreq(phrase);
 
@@ -136,9 +136,7 @@ function showResults() {
   console.log("So, " + user.name + " you had " + user.correct + " correct answers, and " + user.incorrect + " incorrect answers.")
   if (user.incorrect == 0) {
     console.log("That's a perfect!")
-  }else{
-    console.log("Well done!")
-  };
+  }
 }
 
 // call the function, passing it the responses array
