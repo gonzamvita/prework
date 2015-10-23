@@ -120,6 +120,7 @@ function calculateAverage( array )
 // As a condition you must use the object freqCounter.
 // Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 
+/*
 
 function charFreq(string) {
 
@@ -153,6 +154,8 @@ console.log( counter['a'] === 1 );
 console.log( counter['s'] === 1 );
 console.log( counter.d === 1 );
 console.log( counter['f'] === 1 );
+
+*/
 
 //BONUS EXERCISE
 //
