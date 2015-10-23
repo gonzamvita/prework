@@ -115,20 +115,29 @@ function calculateAverage( array )
 
 //EXERCISE 5
 //
-// Restore the comments marks (/* */) of the previous exercises. Exercises 4 and 5 have to be commented
 // Uncomment the exercise code deleting /* and */ chars
-// Now we are going to save the longest length of every array in a new array called array_lengths
-// Open the console and reload the index page to see the result of the code.
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it.
 // As a condition you must use the object freqCounter.
 // Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 
 
-function charFreq( string ) {
-	freqCounter = {};
+function charFreq(string) {
 
-	}
-	return freqCounter;
+  freqCounter = {};
+
+  var array = string.split('');
+  console.log(array);
+
+  for (var i = array.length - 1; i >= 0; i--) {
+    if (array[i] in freqCounter) {
+      freqCounter[array[i]] += 1;
+    }else{
+      freqCounter[array[i]] = 1;
+    };
+    console.log(freqCounter);
+  };
+
+  return freqCounter;
 }
 
 counter = charFreq("abbabcbdbabdbdbabababcbcbab");
