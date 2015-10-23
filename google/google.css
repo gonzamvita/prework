@@ -1,0 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+div {
+  display: block;
+}
+
+p {
+  font-size: 13px;
+  text-align: right;
+  font-family: arial,sans-serif;
+  display: inline-block;
+  text-decoration: none;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+footer {
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  line-height: 40px;
+  min-width: 980px;
+}
+
+#spain {
+  position: relative;
+  color: #4285f4;
+  font: 16px/16px roboto-regular, arial, sans-serif;
+  left: 215px;
+  top: 76px;
+}

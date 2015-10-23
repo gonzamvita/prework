@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My favourite film</title>
+    <link rel="stylesheet" type="text/css" href="css/film.css">
+  </head>
+  <body>
+    <header>My Favourite Film</header>
+    <article class="articleContainer">
+      <img src="img/inception.jpg" width="400" height="600">
+      <aside id="description">
+        <h2>Inception</h2>
+        <p>Inception (titulada Origen en España y El origen en Hispanoamérica) es una película de ciencia ficción escrita, producida y dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio, Ellen Page, Joseph Gordon-Levitt, Ken Watanabe, Tom Hardy, Marion Cotillard, Cillian Murphy, Tom Berenger y Michael Caine. Su estreno mundial tuvo lugar en Londres, Reino Unido, el 8 de julio de 2010. Fue estrenada en EE.UU. el 16 de julio de 2010.2 En México se estrenó el 23 de julio, en Argentina el 29 del mismo mes y en España la película se exhibió el 6 de agosto de 2010.3 Obtuvo 4 premios Óscar por Mejor Fotografía, Mejor Mezcla de Sonido, Mejor Edición de Sonido y Mejores Efectos Visuales. Logró tres premios BAFTA por el Mejor Diseño de Producción, Mejor Sonido y Mejores Efectos Especiales. También obtuvo nominaciones tanto en los Óscar (Mejor Banda Sonora, Mejor Guion Original y Mejor Dirección Artística), como en los Globos de Oro y los Premios BAFTA, destacando en los tres premios las categorías de Mejor Película, Mejor Director, Mejor Banda Sonora y Mejor Guion. Además, obtuvo el tercer lugar de taquilla en 2010 según la ABC.</p>
+      </aside>
+      <aside id="roster">
+        <p>Dirección: Christopher Nolan</p>
+        <p>Dirección: artística Guy Hendrix Dyas</p>
+        <p>Producción: Christopher Nolan, Emma Thomas</p>
+        <p>Guion: Christopher Nolan</p>
+        <p>Música: Hans Zimmer</p>
+        <p>Relacionados: <a href="https://es.wikipedia.org/wiki/Memento">Memento</a> <a href="https://es.wikipedia.org/wiki/The_Dark_Knight">The Dark Knight</a></p>
+      </aside>
+    </article>
+    <footer>
+      <p>Copyleft Ironhack 2015 ;)</p>
+    </footer>
+  </body>
+</html>
+
+
+<script>
+debugger;
+
+var names;
+names = [ "Canada", "Mexico", "Turkey", "Japan" ];
+
+function prepare (array) {
+  var string = "";
+
+  for (var i = 0; i > names.length; i++) {
+    if (i == names.length - 1) {
+      string += " and " + names[i];
+    } else {
+      string += names[i] + ",";
+    }
+  }
+  return string;
+}
+
+// Should print "Canada, Mexico, Turkey and Japan"
+console.log(prepare(names));
+</script>
