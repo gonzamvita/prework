@@ -13,7 +13,7 @@ for (var i = 0; i < 10; i++) {
 //Now I will put some rocks on the grid that must be detected by the rover
 grid[1][1] = "rock"
 grid[2][4] = "rock"
-grid[3][0] = "rock"
+grid[3][7] = "rock"
 grid[8][6] = "rock"
 grid[5][5] = "rock"
 grid[7][9] = "rock"
@@ -21,7 +21,12 @@ grid[7][9] = "rock"
 console.log(grid);
 
 function goForward(rover) {
-  rover.position[0]++
+  if ((rover.position[0]+1)>9) {
+    rover.position[0] = 0;
+  }else{
+    rover.position[0]++
+  };
+
   if (check(rover)) {
     msg = problem(rover);
     rover.position[0]--
@@ -32,7 +37,12 @@ function goForward(rover) {
 }
 
 function goBackward(rover){
-  rover.position[0]--;
+  if ((rover.position[0]-1)<0) {
+    rover.position[0] = 9;
+  }else{
+    rover.position[0]--
+  };
+
   if (check(rover)) {
     rover.position[0]++
     return problem(rover);
@@ -42,7 +52,12 @@ function goBackward(rover){
 }
 
 function turnRight(rover){
-  rover.position[1]++;
+  if ((rover.position[1]+1)>9) {
+    rover.position[1] = 0;
+  }else{
+    rover.position[1]++
+  };
+
   if (check(rover)) {
     rover.position[1]--;
     return problem(rover);
@@ -52,7 +67,12 @@ function turnRight(rover){
 }
 
 function turnLeft(rover){
-  rover.position[1]--;
+  if ((rover.position[1]-1)<0) {
+    rover.position[1] = 9;
+  }else{
+    rover.position[1]--
+  };
+
   if (check(rover)) {
     rover.position[1]++;
     return problem(rover);
@@ -72,8 +92,7 @@ function drivingSeat(rover, grid){
   };
 
   //asking for the movement
-  var question = prompt('Where should be go now? \n \'f\':forward \n \'b\':
-    backward \n \'r\':right \n \'l\':left\nYou can combine them as much as you want! i.e. ffbbrrllrr')
+  var question = prompt('Where should be go now? \n \'f\':forward \n \'b\':backward \n \'r\':right \n \'l\':left\nYou can combine them as much as you want! i.e. ffbbrrllrr')
 
   var movement = question.toLowerCase().split('');
   debugger;
